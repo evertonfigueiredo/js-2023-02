@@ -49,7 +49,7 @@
 // let nome3 = "Guilherme"
 // let nome4 = "Lazaro"
 
-let nome = ["Everton","Bea","Guilherme"]
+// let nome = ["Everton", "Bea", "Guilherme"]
 
 // console.log(nome);
 
@@ -57,16 +57,101 @@ let nome = ["Everton","Bea","Guilherme"]
 //     console.log(nome[index]);
 // }
 
-let controler = true
+// let controler = true
 
-while (controler) {
+// while (controler) {
 
-    let idade = prompt("Qual sua idade?")
+//     let idade = prompt("Qual sua idade?")
 
-    if (idade >= 18) {
-        console.log("Você é maior de idade");
-        controler = false
-    }else{
-        console.log("Informe uma idade maior que 17");
+//     if (idade >= 18) {
+//         console.log("Você é maior de idade");
+//         controler = false
+//     }else{
+//         console.log("Informe uma idade maior que 17");
+//     }
+// }
+
+// ----------------------------------------
+//  Atividade Slide 1
+
+// for (let index = 0; index < 101; index++) {
+
+//     // let resultado = index % 2;
+//     // if (resultado == 0) {
+//     //     console.log(index);
+//     // }
+
+//     if ((index % 2) == 0) {
+//         console.log(index);
+//     }
+// }
+
+// ------------
+
+// for (let index = 0; index < 101; index++) {
+
+//     // let resultado = index % 2;
+//     // if (resultado == 1) {
+//     //     console.log(index);
+//     // }
+
+//     if ((index % 2) == 1) {
+//         console.log(index);
+//     }
+// }
+
+// ------------
+
+// let numero = 500
+
+// if (numero > 1) {
+//     for (let index = 0; index <= numero; index++) {
+//         console.log(index);
+//     }
+// }
+
+// ------------
+
+// let numero = 60
+
+// for (let index = 0; index < numero; index++) {
+
+//     let resultado = index % 5; 
+
+//     if (resultado !== 0) {
+//         console.log(index);
+//     }
+
+// }
+
+// -----------
+
+// let controler = true
+
+// while (controler) {
+
+//     let nota = prompt("Informe uma nota:")
+
+//     if (nota >= 0 && nota <= 10) {
+//         console.log("A nota é valida");
+//         controler = false
+//     }else{
+//         console.log("Nota invalida");
+//     }
+
+// }
+
+// Atividade slide 2
+let controle = true
+
+while (controle) {
+    let nome = prompt("Digite o seu nome:")
+    let senha = prompt("Digite sua senha: ")
+
+    if (nome === senha) {
+        console.log("Erro: Senha e Nome iguais");
+    } else {
+        console.log("Usuario cadastrado");
+        controle = false
     }
 }
