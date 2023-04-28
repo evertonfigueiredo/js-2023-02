@@ -68,12 +68,45 @@
 
 // console.log(pessoas);
 
-let produtos = []
+// let produtos = []
 
-for (let index = 0; index < 5; index++) {
-    let nome = prompt("Qual o produto?")
+// for (let index = 0; index < 5; index++) {
+//     let nome = prompt("Qual o produto?")
 
-    produtos.push(nome)
+//     produtos.push(nome)
+// }
+
+// console.log(produtos);
+
+// OBJETO
+
+// let produto = {
+//     preco: 1.5,
+//     qtd: 2,
+//     nome: "Lapis"
+// }
+
+// console.log(produto.qtd);
+
+let carrinho = []
+
+for (let index = 0; index < 2; index++) {
+    let nome = prompt(`${index} - Qual o nome do seu produto?`)
+    let preco = prompt(`${index} - Qual o preco do seu produto?`)
+    let qtd = prompt(`${index} - Qual a qtd do seu produto?`)
+
+    let produto = {
+        nome,
+        preco,
+        qtd
+    }
+
+    carrinho.push(produto)
 }
 
-console.log(produtos);
+for (let index = 0; index < carrinho.length; index++) {
+   console.log(`Nome: ${carrinho[index].nome}`);    
+   console.log(`Preco: ${carrinho[index].preco}`);    
+   console.log(`Qtd: ${carrinho[index].qtd}`);    
+   console.log(`--------------------------`);    
+}
