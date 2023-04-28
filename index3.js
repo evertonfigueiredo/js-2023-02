@@ -94,12 +94,17 @@ for (let index = 0; index < 2; index++) {
     let nome = prompt(`${index} - Qual o nome do seu produto?`)
     let preco = prompt(`${index} - Qual o preco do seu produto?`)
     let qtd = prompt(`${index} - Qual a qtd do seu produto?`)
+    let total = preco * qtd
 
     let produto = {
         nome,
         preco,
-        qtd
+        qtd,
+        total
     }
+
+    // parseFloat() -> DICA TEXTO EM NUMERO COM VIRGULA
+    // parseINT() -> DICA TEXTO EM NUMERO INTEIRO
 
     carrinho.push(produto)
 }
@@ -108,5 +113,6 @@ for (let index = 0; index < carrinho.length; index++) {
    console.log(`Nome: ${carrinho[index].nome}`);    
    console.log(`Preco: ${carrinho[index].preco}`);    
    console.log(`Qtd: ${carrinho[index].qtd}`);    
+   console.log(`Total: ${carrinho[index].total}`);    
    console.log(`--------------------------`);    
 }
