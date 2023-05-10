@@ -141,21 +141,43 @@ class Carrinho{
         return carrinho
     }
 
-    adicionaProduto(nome, qtd, preco){
+    adicionaProduto(sku, nome, qtd, preco){
         let produto = {
-            sku: this.itens.length,
+            sku,
             nome,
             qtd,
             preco
         }
 
         this.itens.push(produto)
-
+        console.log(this.itens);
+        localStorage.setItem("carrinho", JSON.stringify(this.retornaCarrinho()))
         return "Cadastrado com sucesso!"
+    }
+
+    removeProduto(sku){
+        let resultado = this.itens.findIndex((produto) => produto.sku === sku)
+
+        if (resultado < 0) {
+            return "Produto não encontrado"
+        }
+
+        this.itens.splice(resultado, 1)
+
+        return "Produto removido com sucesso!"
+
     }
 
 }
 
 let carrinho = new Carrinho()
-console.log(carrinho);
-console.log(carrinho.retornaCarrinho());
+
+function retornarDados() {
+    console.log(JSON.parse(localStorage.getItem("carrinho")).itens[0].nome);
+}
+
+
+
+
+
+
